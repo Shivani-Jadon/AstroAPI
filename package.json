@@ -1,0 +1,14 @@
+{
+  "name": "astro-api",
+  "version": "1.0.0",
+  "description": "API for astro app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shivani Jadon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
