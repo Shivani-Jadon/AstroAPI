@@ -38,7 +38,7 @@ const serviceSchema = new mongoose.Schema({
 
 const reportSchema = new mongoose.Schema({
     services : {
-        trype : [serviceSchema],
+        type : [serviceSchema],
         default : undefined
     }
 });
