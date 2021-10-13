@@ -25,7 +25,7 @@ module.exports.createHoroscope = function(req, res) {
     function(err, newHoroscope){
        if(err){
            console.log("Error in creating horoscope", err);
-           return;
+           return res.status(406).send(err.message);
        } 
 
        return res.status(200).send("Horoscope data saved");
@@ -40,7 +40,7 @@ module.exports.fetchHoroscope = async function(req, res) {
         let horoscopeData = await Horoscope.find({}).exec();
         return res.status(200).send(horoscopeData);
     }catch(err){
-        return res.sendStatus(err.status);
+        return res.status(400).end(err.message);
     }
    
 }

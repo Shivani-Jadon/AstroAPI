@@ -7,6 +7,6 @@ router.post("/save", horoscopeController.createHoroscope);
 
 router.get("/fetch", horoscopeController.fetchHoroscope);
 
-router.put("/update", horoscopeController.updateHoroscope);
+router.put("/updateContent", horoscopeController.updateHoroscope);
 
 module.exports = router;

@@ -23,6 +23,11 @@ const astrologerSchema = new mongoose.Schema({
     profilePicUrl : {
         type : String
     },
+    experience : {
+        type : Number,
+        required : true,
+        default : 10
+    },
     languages : {
         type : [String]
     },
@@ -69,10 +74,10 @@ const astrologerSchema = new mongoose.Schema({
       },
       slot : {
          from : {
-            type : Date
+            type : String
          },
          to : {
-            type : Date
+            type : String
          }
       }
    }
