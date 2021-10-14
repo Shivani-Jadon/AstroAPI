@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const questionSchema = new mongoose.Schema({
-    question : {
+        
         id : {
             type : Number,
             required : true,
@@ -23,7 +23,7 @@ const questionSchema = new mongoose.Schema({
         suggestions : {
             type : [String]
         }
-    }
+    
 });
 
 const Question = mongoose.model("QuestionModel" , questionSchema);

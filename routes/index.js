@@ -13,4 +13,7 @@ router.use("/api/report", require("./reportRouter"));
 // Banner
 router.use("/api/banner", require("./bannerRouter"));
 
+// Question
+router.use("/api/question", require("./questionRouter"));
+
 module.exports = router;
