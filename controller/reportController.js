@@ -4,16 +4,23 @@ const report = new Report;
 // controller method to create new report
 module.exports.createReport = function(req, res) {
     let data = req.body;
-    Report.services.push({
-       data
-    },
+    Report.create(req.body  ,
     function(err, newReport) {
         if(err) {
             console.log("error in creating new report ", err);
             return res.status(400).send(err.message);
         }
 
-        return res.status(200).send("Report created \n" + newReport);
+        return res.status(200).json({
+            httpStatus : "OK",
+            httpStatusCode :200,
+            success :true,
+            message :"Services added successfully.",
+            apiName :"Add new service.",
+            new_data :{
+                service : newReport
+            }
+        })
     }
     )
 }
@@ -22,7 +29,16 @@ module.exports.createReport = function(req, res) {
 module.exports.fetchReports = async function(req, res) {
     try{
         let reportData = await Report.find({}).exec();
-        return res.status(200).send(reportData);
+        return res.status(200).json({
+            httpStatus : "OK",
+            httpStatusCode :200,
+            success :true,
+            message :"Services fetched successfully.",
+            apiName :"Get all services.",
+            data :{
+                services : reportData
+            }
+        });
     }
     catch(err) {
         console.log(err);

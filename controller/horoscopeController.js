@@ -25,7 +25,14 @@ module.exports.createHoroscope = function(req, res) {
     function(err, newHoroscope){
        if(err){
            console.log("Error in creating horoscope", err);
-           return res.status(406).send(err.message);
+           return res.status(406).json({
+            httpStatus :"OK",
+            httpStatusCode :200,
+            success :true,
+            message :"horoscope added successfully",
+            apiName :"Create horoscopes",
+            data_added : newHoroscope
+        });;
        } 
 
        return res.status(200).send("Horoscope data saved");
@@ -38,7 +45,14 @@ module.exports.fetchHoroscope = async function(req, res) {
     // fetching all the sunsign's horoscope
     try{
         let horoscopeData = await Horoscope.find({}).exec();
-        return res.status(200).send(horoscopeData);
+        return res.status(200).json({
+            httpStatus :"OK",
+            httpStatusCode :200,
+            success :true,
+            message :"fetched successfully",
+            apiName :"Get all daily horoscopes",
+            data : horoscopeData
+        });
     }catch(err){
         return res.status(400).end(err.message);
     }

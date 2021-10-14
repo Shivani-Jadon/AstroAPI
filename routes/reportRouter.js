@@ -7,6 +7,6 @@ router.post("/create", reportController.createReport);
 
 router.get("/fetch", reportController.fetchReports);
 
-router.put("/delete", reportController.deleteReport);
+router.delete("/delete", reportController.deleteReport);
 
 module.exports = router;
