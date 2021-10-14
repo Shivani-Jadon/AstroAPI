@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const bannerSchema = mongoose.Schema({
-    bannerData : [{
         id : {
             type : Number,
             required : true,
@@ -38,8 +37,8 @@ const bannerSchema = mongoose.Schema({
                 id : { type : Number }
             }
          }
-    }]
+    
 })
 
-const Banner = mongoose.Model("BannerModel", bannerSchema);
+const Banner = mongoose.model("BannerModel", bannerSchema);
 module.exports = Banner;
