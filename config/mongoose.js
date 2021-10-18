@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const mongoAtlasUri = "mongodb+srv://Shivani:12345@clusterastro.vyrzt.mongodb.net/astroDatabase?retryWrites=true&w=majority"
+const mongoAtlasUri = "{Mongodb cluster URL to connect your application}"; //eg: "mongodb+srv://{username}:{password}@clusterastro.vyrzt.mongodb.net/astroDatabase?retryWrites=true&w=majority"
 
 
 try {
