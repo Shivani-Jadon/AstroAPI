@@ -16,6 +16,22 @@ The APIs are capable of performing CRUD operation.
 5. Report data can be saved, fetched and deleted.
 6. Cloud database is used so no need for local database.
 
+## Preview Astrologer API
+#### Astrologer data
+<img src="src/assets/Astro_API_Preview/Astrologer.png" width="600px" height="300px"></img> 
+
+#### Banner data
+<img src="src/assets/Astro_API_Preview/Banner.png" width="600px" height="300px"></img> 
+
+#### Horoscope data
+<img src="src/assets/Astro_API_Preview/Horoscope.png" width="600px" height="300px"></img> 
+
+#### Question data
+<img src="src/assets/Astro_API_Preview/Question.png" width="600px" height="300px"></img> 
+
+#### Report data
+<img src="src/assets/Astro_API_Preview/Report.png" width="600px" height="300px"></img> 
+
 ## How to install and run?
 1. Clone this project
 2. Start by installing npm if you don't have them already.
